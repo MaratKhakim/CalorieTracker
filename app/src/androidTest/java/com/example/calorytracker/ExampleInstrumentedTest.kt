@@ -1,4 +1,4 @@
-package com.example.calorietracker
+package com.example.calorytracker
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

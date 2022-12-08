@@ -1,4 +1,4 @@
-package com.example.calorietracker
+package com.example.calorytracker
 
 import org.junit.Test
 
