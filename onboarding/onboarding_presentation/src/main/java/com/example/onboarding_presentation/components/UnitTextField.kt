@@ -28,6 +28,7 @@ fun UnitTextField(
         modifier = modifier, horizontalArrangement = Arrangement.Center
     ) {
         BasicTextField(
+            textStyle = textStyle,
             value = value,
             onValueChange = onValueChange,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
