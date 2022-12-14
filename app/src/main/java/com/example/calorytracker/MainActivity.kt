@@ -18,6 +18,8 @@ import com.example.calorytracker.ui.theme.CaloryTrackerTheme
 import com.example.core.navigation.Route
 import com.example.onboarding_presentation.age.AgeScreen
 import com.example.onboarding_presentation.gender.GenderScreen
+import com.example.onboarding_presentation.height.HeightScreen
+import com.example.onboarding_presentation.weight.WeightScreen
 import com.example.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,8 +32,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val scaffoldState = rememberScaffoldState()
                 Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    scaffoldState = scaffoldState
+                    modifier = Modifier.fillMaxSize(), scaffoldState = scaffoldState
                 ) {
                     NavHost(navController = navController, startDestination = Route.WELCOME) {
                         composable(Route.WELCOME) {
@@ -39,18 +40,21 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(Route.AGE) {
                             AgeScreen(
-                                scaffoldState = scaffoldState,
-                                onNavigate = navController::navigate
+                                scaffoldState = scaffoldState, onNavigate = navController::navigate
                             )
                         }
                         composable(Route.GENDER) {
                             GenderScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.HEIGHT) {
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState, onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT) {
-
+                            WeightScreen(
+                                scaffoldState = scaffoldState, onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.NUTRIENT_GOAL) {
 
