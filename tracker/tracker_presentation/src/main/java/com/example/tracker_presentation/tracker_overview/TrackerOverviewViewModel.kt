@@ -59,13 +59,13 @@ class TrackerOverviewViewModel @Inject constructor(
             }
             is TrackerOverviewEvent.OnPreviousDayClick -> {
                 state = state.copy(
-                    date = state.date.plusDays(1)
+                    date = state.date.plusDays(-1)
                 )
                 refreshFoods()
             }
             is TrackerOverviewEvent.OnNextDayClick -> {
                 state = state.copy(
-                    date = state.date.plusDays(-1)
+                    date = state.date.plusDays(1)
                 )
                 refreshFoods()
             }
